@@ -31,7 +31,9 @@ app.use("/api/user", userRouter);
 //   let data = await geminiResponse(prompt)
 //   res.json(data)
 // })
-
+app.get('/',(req,res)=>{
+  res.send("Hello")
+})
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
   connectDB();
